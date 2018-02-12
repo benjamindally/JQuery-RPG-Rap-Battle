@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rap Battle RPG</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<script type="text/javascript" src="./assets/javascript/javascript.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+</head>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center jumbotron">
+				<h1 >Rap Battle</h1>
+				<br><br>
+				<h3>Who's the illist?</h3>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-12 text-center instructions">
+				<h3>Chose your rapper to begin the battle. Last one standing is the king.</h3>
+			</div>
+			<div class="col-sm-3 text-center">
+				<div class="card hero" id="eminem" value="1">
+					<img class="card-img-top" src="./assets/images/eminem.jpg">
+					<div class="card-body">
+						<h5 class="card-title">Eminem</h5>
+						<p class="card-text">HP: 120</p>
+						<p class="card-text">Attack: 8</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3 text-center">
+				<div class="card hero" id="tupac">
+					<img class="card-img-top" src="./assets/images/tupac.jpg">
+					<div class="card-body">
+						<h5 class="card-title">2pac</h5>
+						<p class="card-text">HP: 100</p>
+						<p class="card-text">Attack: 14</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3 text-center">
+				<div class="card hero" id="jayz">
+					<img class="card-img-top" src="./assets/images/jayz.jpg">
+					<div class="card-body">
+						<h5 class="card-title">Jay-Z</h5>
+						<p class="card-text">HP: 150</p>
+						<p class="card-text">Attack: 8</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3 text-center">
+				<div class="card hero" id="lamar">
+					<img class="card-img-top" src="./assets/images/lamar.jpg">
+					<div class="card-body">
+						<h5 class="card-title">Kendrick</h5>
+						<p class="card-text">HP: 180</p>
+						<p class="card-text">Attack: 8</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-5 text-center">
+				<div class="card arena" id="challenger">
+					<h5 class="arenaText">Battle Arena</h5>
+					<h5 class="arenaText">Challenger</h5>
+
+					<div class="card player" id="eminem_hero">
+						<img class="card-img-top" src="./assets/images/eminem.jpg">
+						<div class="card-body hero_div">
+							<h5 class="card-title">Eminem</h5>
+							<p class="card-text hp">HP: 120</p>
+							<p class="card-text attk">Attack: 8</p>
+						</div>
+					</div>
+
+					<div class="card player" id="tupac_hero">
+						<img class="card-img-top" src="./assets/images/tupac.jpg">
+						<div class="card-body hero_div">
+							<h5 class="card-title">2pac</h5>
+							<p class="card-text hp">HP: 100</p>
+							<p class="card-text attk">Attack: 14</p>
+						</div>
+					</div>
+
+					<div class="card player" id="jayz_hero">
+						<img class="card-img-top" src="./assets/images/jayz.jpg">
+						<div class="card-body hero_div">
+							<h5 class="card-title">Jay-Z</h5>
+							<p class="card-text hp">HP: 150</p>
+							<p class="card-text attk">Attack: 8</p>
+						</div>
+					</div>
+
+					<div class="card player" id="lamar_hero">
+						<img class="card-img-top" src="./assets/images/lamar.jpg">
+						<div class="card-body hero_div">
+							<h5 class="card-title">Kendrick Lamar</h5>
+							<p class="card-text hp">HP: 180</p>
+							<p class="card-text attk">Attack: 7</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-2 text-center">
+				<div class="button_spot">
+					<button class="attacker">Spit Rhymes</button>
+				</div>
+			</div>
+
+			<div class="col-md-5 text-center">
+				<div class="card arena" id="defender">
+					<h5 class="defender_text">Battle Arena</h5>
+					<h5 class="defender_text">Defender</h5>
+
+				<div class="card combatant" id="eminem_combatant">
+						<img class="card-img-top" src="./assets/images/eminem.jpg">
+						<div class="card-body enemy_div">
+							<h5 class="card-title">Eminem</h5>
+							<p class="card-text enemy_hp">HP: 120</p>
+							<p class="card-text">Counter Attack: 15</p>
+						</div>
+					</div>
+
+					<div class="card combatant" id="tupac_combatant">
+						<img class="card-img-top" src="./assets/images/tupac.jpg">
+						<div class="card-body enemy_div">
+							<h5 class="card-title">2pac</h5>
+							<p class="card-text enemy_hp">HP: 100</p>
+							<p class="card-text">Counter Attack: 5</p>
+						</div>
+					</div>
+
+					<div class="card combatant" id="jayz_combatant">
+						<img class="card-img-top" src="./assets/images/jayz.jpg">
+						<div class="card-body enemy_div">
+							<h5 class="card-title">Jay-Z</h5>
+							<p class="card-text enemy_hp">HP: 150</p>
+							<p class="card-text">Counter Attack: 20</p>
+						</div>
+					</div>
+
+					<div class="card combatant" id="lamar_combatant">
+						<img class="card-img-top" src="./assets/images/lamar.jpg">
+						<div class="card-body enemy_div">
+							<h5 class="card-title">Kendrick Lamar</h5>
+							<p class="card-text enemy_hp">HP: 180</p>
+							<p class="card-text">Counter Attack: 19</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>	
+</body>
+</html>

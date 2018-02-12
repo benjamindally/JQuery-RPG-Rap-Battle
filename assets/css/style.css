@@ -1,0 +1,112 @@
+body{
+	font-family: 'Sedgwick Ave Display', cursive;
+	background: black;
+	color: yellow;
+}
+
+.jumbotron{
+	background: black;
+	padding-bottom: 10px;
+}
+
+h1{
+	font-size: 450%;
+	color: yellow;
+    text-shadow: -1px 0 purple, 0 13px purple, 13px 0 purple, 0 -1px purple;
+}
+
+.jumbotron h3{
+	font-size: 200%;
+	color: yellow;
+    text-shadow: -1px 0 purple, 0 9px purple, 9px 0 purple, 0 -1px purple;
+}
+
+.instructions h3{
+	font-size: 150%;
+	color: yellow;
+    text-shadow: -1px 0 purple, 0 5px purple, 5px 0 purple, 0 -1px purple;
+    padding-bottom: 15px;
+}
+
+.card{
+	color: yellow;
+	text-shadow: -1px 0 purple, 0 3px purple, 3px 0 purple, 0 -1px purple;
+	background: black;
+	border: 1px solid purple;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+.card h5{
+	font-size: 90%;
+}
+
+.card p{
+	font-size: 75%;
+	margin-bottom: 0px;
+
+}
+
+.arena{
+	margin: 10px 0px 40px 0px;
+	height: 400px;
+	color: yellow;
+	text-shadow: -1px 0 purple, 0 3px purple, 3px 0 purple, 0 -1px purple;
+	padding-top: 100px;
+}
+
+.attacker{
+	margin: 125px 0px 40px 0px;
+	background: purple;
+	color: yellow;
+	border: 1px solid yellow;
+	border-radius: 4px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.player{
+	z-index: 0;
+	visibility: hidden;
+	position: relative;
+}
+
+.player_selected{
+	visibility: visible;
+	position: relative;
+	height: 100px;
+	border: none;
+	padding-top: 0px;
+	z-index: 1000;
+	background: darkviolet;
+}
+
+.combatant{
+	z-index: 0;
+	visibility: hidden;
+	position: absolute;
+}
+
+.combatant_selected{
+	visibility: visible;
+	position: absolute;
+	height: 100%;
+	border: none;
+	padding-top: 0px;
+	z-index: 1000;
+	background: red;
+}
+
+.hero_div{
+	background: darkviolet;
+	border-radius: 4px;
+}
+
+.button_spot{
+	margin: 20px 0px 90px 0px;
+}
+
+.enemy_div{
+	background: red;
+	border-radius: 4px;
+}
