@@ -16,13 +16,14 @@
 <body>
 	<div class="container">
 		<div class="row">
+			<!-- header with title -->
 			<div class="col-md-12 text-center jumbotron">
 				<h1 >Rap Battle</h1>
 				<br><br>
 				<h3>Who's the illist?</h3>
 			</div>
 		</div>
-		
+		<!-- instructions and initial player cards -->
 		<div class="row">
 			<div class="col-sm-12 text-center instructions">
 				<h3>Chose your rapper to begin the battle. Last one standing is the king.</h3>
@@ -68,7 +69,7 @@
 				</div>
 			</div>
 		</div>
-
+		<!-- battle arena where hero will load. all cards are hidden until shown later using js -->
 		<div class="row">
 			<div class="col-md-5 text-center">
 				<div class="card arena" id="challenger">
@@ -112,12 +113,14 @@
 					</div>
 				</div>
 			</div>
-
+			<!-- button to press to engage combatans -->
 			<div class="col-md-2 text-center">
 				<div class="button_spot">
 					<button class="attacker">Spit Rhymes</button>
 				</div>
 			</div>
+
+		<!-- battle arena where enemy will load. all cards are hidden until shown later using js -->
 
 			<div class="col-md-5 text-center">
 				<div class="card arena" id="defender">
@@ -162,5 +165,18 @@
 				</div>
 			</div>
 	</div>	
+	<!-- various sounds to be used in the game -->
+	<audio id="load_sound">
+		<source src="./assets/sounds/kamehameha.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="winning_sound">
+		<source src="./assets/sounds/ohh.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="losing_sound">
+		<source src="./assets/sounds/loser.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="enemy_sound">
+		<source src="./assets/sounds/evil_laugh.mp3" type="audio/mpeg">
+	</audio>
 </body>
 </html>
