@@ -170,38 +170,44 @@ $(document).ready(function(){
 	})
 	//function that will make the players battle
 	$(".attacker").click(function(){
-		heroLife = (heroLife - enemyCounterPower);//subtracts the hero's life from the coutner attack power of the enemy
-		console.log(enemyLife);
+		console.log("headcount" + headcount);
 		if (heroOn && enemyOn){//this makes the game play out only if a hero and enemy are both active
-			if (heroLife < 1){//this is what happens if the hero's life is less than 1 (dead)
-				loserMusic.play();//plays music to alert user they have died
-				alert("You are not illist.");//alerts user that they are in fact not the illist rapper around and lost
-				location.reload();//reloads the page to play again
-				return;//ends the function so nothring more can happen. probably not necessary what with the reload and all, but better safe than sorry no?
-			}
+			heroLife = (heroLife - enemyCounterPower);//subtracts the hero's life from the coutner attack power of the enemy
+			gameLoser();
+			enemyLife = (enemyLife - attkPower);//the enemey lessend by the amount of the hero's attack power
+			attkPower = (attkPower + playerCharacter.attack);//the hero's attack power is increased by the initial attack power amount
 			$(".enemy_hp").text(computerCharacter.enemyLife);//updates the enemy's life 
-					enemyLife = (enemyLife - attkPower);//the enemey lessend by the amount of the hero's attack power
-					attkPower = (attkPower + playerCharacter.attack);//the hero's attack power is increased by the initial attack power amount
-					$(".hp").text("HP: " + heroLife);//the hero's hp is updated so the user knows where they stand
-					$(".enemy_hp").text("HP: " + enemyLife);//the enemey's hp is updated
-					$(".attk").text("Attack: " + attkPower);//the new attack power of the hero is updated
-					console.log("hero" + heroLife);//logs so that programmer knows they're on the right track
-					console.log("enemy life " + enemyLife);
-					console.log("attack" + attkPower);
+			$(".hp").text("HP: " + heroLife);//the hero's hp is updated so the user knows where they stand
+			$(".enemy_hp").text("HP: " + enemyLife);//the enemey's hp is updated
+			$(".attk").text("Attack: " + attkPower);//the new attack power of the hero is updated
 			} 
 
-			if (enemyLife <= 0){//this is what happens when a hero kills a player
+			if (enemyOn && enemyLife <= 0){//this is what happens when a hero kills a player
 				$('.combatant_selected').remove();//the enemy is removed from the arena
 				$('.defender_text').html('<h5 style="padding-top: 100px">Battle!</h5>');//text is displayed in the enemies place
 				$('.defender_text').show();//text is shown instead of hidden
 				enemyOn = false;//makes it so that an enemy can be selected again
 				headcount++;//increases the head count so that the user is closer to winning
-				}
-			if (headcount === 3){//this happens if the user kills all the opponents
+				gameWinner();
+				return;
+				} 
+		})
+
+	function gameWinner(){
+		if (headcount === 3){//this happens if the user kills all the opponents
 				$('.defender_text').html('<h5 style="padding-top: 100px">Dope Rhymes!</h5>');//dislays new text so the user knows they had dope rhymes and won
 				winnerMusic.play();//plays some winning music
 				alert(playerCharacter.name + " a.k.a. " + playerCharacter.alias[0] + " a.k.a. " + playerCharacter.alias[1] +  " a.k.a. " + playerCharacter.alias[2] + " is the king!");//alerts user that they have won
 				location.reload();//reloads the page so they can play again
 			}
-		})
+	}
+
+	function gameLoser(){
+		if (heroLife < 1){//this is what happens if the hero's life is less than 1 (dead)
+				loserMusic.play();//plays music to alert user they have died
+				alert("You are not illist.");//alerts user that they are in fact not the illist rapper around and lost
+				location.reload();//reloads the page to play again
+				return;//ends the function so nothring more can happen. probably not necessary what with the reload and all, but better safe than sorry no?
+			} 
+	}
 })
